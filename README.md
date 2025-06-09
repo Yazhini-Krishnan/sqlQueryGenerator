@@ -1,4 +1,4 @@
-# Query GPT: Natural Language to SQL Query Generator
+# SQL Query Generator: Natural Language to SQL Query
 
 **Query GPT** is a free, open-source tool that lets anyone convert natural language questions into SQL queries for their own data tables, using local open-source AI models (like Phi-3) — no API keys, no usage limits, and no costs.
 
@@ -22,5 +22,43 @@
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/query-gpt.git
+git clone https://github.com/Yazhini-Krishnan/sqlQueryGenerator/blob/main/README.md
 cd query-gpt
+```
+
+### 2. Setting up a Python virtual environment
+
+```bash
+python -m venv venv
+# Activate the environment:
+# On Windows:
+venv\Scripts\activate
+# On Mac/Linux:
+source venv/bin/activate
+
+```
+### 3. Pip Upgrade
+``` bash
+pip install --upgrade pip
+
+```
+### 4. Install Required Dependencies
+```bash
+pip install streamlit pandas llama-cpp-python huggingface_hub
+
+```
+### 5. Download Phi-3 Model
+```bash
+python phi_3_download.py
+
+```
+### 6. Update path in app.py
+Update the model path in your app.py as needed:
+```bash
+MODEL_PATH = "/full/path/to/phi-3-mini-4k-instruct.Q4_K_M.gguf"
+
+```
+### 7. Run the app
+```bash
+streamlit run app.py
+
